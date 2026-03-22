@@ -125,15 +125,11 @@ Update with `cd ~/.antigravity/skills/cc-skills-golang && git pull`.
 
 These skills are designed as **atomic, cross-referencing units**. A skill may reference conventions defined in another (e.g. error-handling rules that affect logging live in `golang-error-handling`, not `golang-observability`). Installing only a subset will give you a partial — and potentially inconsistent — view of the guidelines. For best results, install all general-purpose skills together.
 
-Each skill lives in `skills/<name>/` with a `SKILL.md` entry point. The `SKILL.md` is kept small with internal references to advanced markdown files, so only the relevant content is loaded into context.
-
 - **Description (tok)** — weight of the `description` field from YAML frontmatter, always loaded into Claude's context for skill triggering
 - **SKILL.md (tok)** — weight of the full `SKILL.md` file loaded when the skill triggers
 - **Directory (tok)** — weight of all files in the skill directory (SKILL.md + referenced markdown files)
 
 Skills marked with ⭐️ are recommended as a starting point for most Go projects.
-
-**General purpose:**
 
 - ✅ Published
 - 👷 Work in progress
@@ -141,6 +137,8 @@ Skills marked with ⭐️ are recommended as a starting point for most Go projec
 - ⚡ Command available
 - 🧠 Ultrathink automatically
 - ⚙️ Overridable (see doc below)
+
+**General purpose:**
 
 |     | Skill                               | Flags    | Error rate gap | Description (tok) | SKILL.md (tok) | Directory (tok) |
 | --- | ----------------------------------- | -------- | -------------- | ----------------- | -------------- | --------------- |
