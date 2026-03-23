@@ -190,12 +190,6 @@ These skills are designed as **atomic, cross-referencing units**. A skill may re
 | ❌ `golang-temporal` |  | — | 0 | 0 | 0 |
 | ✅ `golang-stretchr-testify` |  | -47% | 89 | 1,714 | 2,533 |
 
-Token counts are measured with `npm exec -- tiktoken-cli --exclude "evals" skills/{name}/`. Description tokens extracted with:
-
-```bash
-awk 'NR==1 && /^---$/{found=1; next} found && /^---$/{exit} found && /^description:/{print}' skills/<name>/SKILL.md | npx tiktoken-cli
-```
-
 ## 🧪 Skill evaluations
 
 |             | With Skill          | Without Skill       | Delta     |
